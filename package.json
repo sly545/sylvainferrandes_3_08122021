@@ -1,0 +1,11 @@
+{
+  "name": "-p3_ferrandes_code",
+  "version": "1.0.0",
+  "description": "\"Ho my food\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
