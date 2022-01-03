@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -267,6 +268,7 @@ img {
   .content .contener-t {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
   .content .nom-restaux {
     display: flex;
@@ -325,10 +327,144 @@ img {
     margin-right: 8px;
   }
 
+  .fond {
+    background-color: #f2f2f2;
+  }
+
   .head-carte {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    align-items: stretch;
+    margin-top: 15px;
+  }
+
+  .logo-carte {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    align-items: center;
+  }
+  .logo-carte img {
+    width: 45%;
+  }
+  .logo-carte i {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+    padding-right: 20%;
+  }
+  .logo-carte a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20%;
+  }
+
+  .menu-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-title img {
+    width: 100%;
+  }
+
+  .texte-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    justify-content: space-around;
+    border-radius: 25px;
+    position: absolute;
+    top: 287px;
+    align-items: center;
+  }
+  .texte-menu h1 {
+    font-size: 30px;
+    font-family: "Shrikhand";
+    margin-right: 13px;
+  }
+  .texte-menu i {
+    font-size: 25px;
+    font-weight: lighter;
+  }
+
+  .Entrée {
+    padding-top: 35px;
+  }
+
+  .intitu {
+    margin-top: 55px;
+    border-bottom: solid 3px #99E2D0;
+    width: 12%;
+    margin-left: 12px;
+    font-weight: 200;
+  }
+
+  .mini-card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 1px 1px 12px #b4b3b3;
+    border-radius: 25px;
+    margin-bottom: 18px;
+    margin-right: 5%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contnere-text-minicard {
+    display: flex;
+    flex-direction: column;
+  }
+  .contnere-text-minicard h2 {
+    font-size: 16px;
+    padding-left: 17px;
+    margin-bottom: auto;
+  }
+  .contnere-text-minicard h3 {
+    font-weight: 300;
+    font-size: smaller;
+    padding-left: 17px;
+  }
+
+  .prix {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .check {
+    display: flex;
+    color: white;
+  }
+  .check :hover {
+    transition: 0.5s;
+    font-size: 42px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    animation: opacity 2s both;
+    transform: scale(1, 1) rotate(360deg);
+  }
+
+  .command {
+    width: 80%;
+    margin-left: 33px;
+    border: none;
+    border-radius: 45px;
+    margin-top: 15px;
+    margin-bottom: 45px;
+    color: white;
+    font-size: 20px;
+    padding: 18px;
+    font-weight: 300;
+    background-color: #FF79DA;
+    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   }
 }
 
