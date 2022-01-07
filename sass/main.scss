@@ -11,17 +11,39 @@ img{
 }
 @keyframes slydebar-check {
     from{
-        transform: rotate(180deg) 
+        transform: rotate(0deg);width:0px;overflow: visible; 
+    }
+
+    to{
+        transform: rotate(360deg);width: 100px;overflow:visible;
     }
 
 }
 @keyframes back-apparition {
     
     from{
-        transform: translate(10px);
+        transform: translate(0px);width: 12px; background-color: $tertiare ;
     }
+
+    to{
+        transform: translate(10px);width: 55px; background-color: $tertiare; 
+    }
+
     
 }
+@keyframes menu-come {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    
+}
+
 
 
 
@@ -377,6 +399,7 @@ img{
 
 .end-comend{
     background-color: #f2f2f2;
+    ;
 }
 
 .head-carte{
@@ -461,6 +484,7 @@ img{
     width: 12%;
     margin-left: 12px;
     font-weight: 200;
+    
 }
 .mini-card{
     display: flex;
@@ -473,6 +497,8 @@ img{
     margin-left: 5%;
     align-items: center;
     justify-content: space-between;
+    
+
 
 }
 
@@ -480,19 +506,32 @@ img{
 .contnere-text-minicard{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
 
     h2{
         font-size: 16px;
         padding-left: 17px;
         margin-bottom: auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    
+        
 
     
     }
-
     h3{
         font-weight: 300;
         font-size: smaller;
         padding-left: 17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+
     }
    
 }
@@ -509,19 +548,22 @@ img{
     overflow: hidden;
     width:0%;
     display: flex;
-    background-color:$tertiare;
     color: white;
     border-radius: 0 15px 15px 0;
     font-size: 30px;
-    
+    animation: back-apparition 4s;
     
 
+    
     i{
         overflow: hidden;
         padding-right: 10px;
         padding-left: 10px;
         padding-top: 22px;
         padding-bottom: 22px;
+        animation: back-apparition 4s;
+        animation: slydebar-check 3s;
+
         
     }
 

@@ -9,12 +9,36 @@ img {
 
 @keyframes slydebar-check {
   from {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
+    width: 0px;
+    overflow: visible;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 100px;
+    overflow: visible;
   }
 }
 @keyframes back-apparition {
   from {
+    transform: translate(0px);
+    width: 12px;
+    background-color: #99E2D0;
+  }
+  to {
     transform: translate(10px);
+    width: 55px;
+    background-color: #99E2D0;
+  }
+}
+@keyframes menu-come {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -409,16 +433,25 @@ form i {
 .contnere-text-minicard {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .contnere-text-minicard h2 {
   font-size: 16px;
   padding-left: 17px;
   margin-bottom: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .contnere-text-minicard h3 {
   font-weight: 300;
   font-size: smaller;
   padding-left: 17px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .prix {
@@ -431,10 +464,10 @@ form i {
   overflow: hidden;
   width: 0%;
   display: flex;
-  background-color: #99E2D0;
   color: white;
   border-radius: 0 15px 15px 0;
   font-size: 30px;
+  animation: back-apparition 4s;
 }
 .check i {
   overflow: hidden;
@@ -442,6 +475,8 @@ form i {
   padding-left: 10px;
   padding-top: 22px;
   padding-bottom: 22px;
+  animation: back-apparition 4s;
+  animation: slydebar-check 3s;
 }
 
 .money {
