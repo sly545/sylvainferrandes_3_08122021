@@ -415,6 +415,7 @@ form i {
   width: 12%;
   margin-left: 12px;
   font-weight: 200;
+  animation: menu-come 5s;
 }
 
 .mini-card {
@@ -428,6 +429,7 @@ form i {
   margin-left: 5%;
   align-items: center;
   justify-content: space-between;
+  animation: menu-come 5s;
 }
 
 .contnere-text-minicard {
@@ -475,7 +477,6 @@ form i {
   padding-left: 10px;
   padding-top: 22px;
   padding-bottom: 22px;
-  animation: back-apparition 4s;
   animation: slydebar-check 3s;
 }
 
@@ -636,51 +637,64 @@ footer ul p {
     width: 90%;
     margin: 0 auto;
   }
-
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 993px) {
   .rom {
     margin-top: 5px;
   }
   .rom img {
     width: 35%;
   }
-
+}
+@media screen and (min-width: 993px) {
   .title {
     font-size: 17px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .choice {
     display: flex;
     flex-direction: row;
     height: 95px;
     justify-content: space-around;
   }
-
+}
+@media screen and (min-width: 993px) {
   .phone {
     margin-right: 5px;
   }
   .phone i {
     margin-left: 0px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .side-bar {
     margin-right: 5px;
   }
   .side-bar i {
     margin-left: 0px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .T1 {
     margin-left: 0;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
   }
-
+}
+@media screen and (min-width: 993px) {
   .title-restau h2 {
     margin-left: 0%;
     text-align: center;
   }
-
+}
+@media screen and (min-width: 993px) {
   .content {
     display: flex;
     flex-direction: column;
@@ -697,17 +711,20 @@ footer ul p {
     width: 40%;
     margin-left: 6%;
   }
-
+}
+@media screen and (min-width: 993px) {
   .new-tabs {
     display: flex;
     flex-direction: row;
   }
-
+}
+@media screen and (min-width: 993px) {
   .card-nonew-tabs {
     display: flex;
     flex-direction: row;
   }
-
+}
+@media screen and (min-width: 993px) {
   footer {
     display: flex;
     flex-direction: row;
@@ -725,7 +742,8 @@ footer ul p {
     margin-top: 55px;
     margin-right: 25px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .texte-menu {
     width: 100%;
     display: flex;
@@ -736,11 +754,13 @@ footer ul p {
   .texte-menu h1 {
     font-size: 35px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .Entrée {
     padding-top: 0%;
   }
-
+}
+@media screen and (min-width: 993px) {
   .fond {
     display: flex;
     flex-direction: row;
@@ -748,20 +768,24 @@ footer ul p {
     justify-content: space-around;
     align-items: flex-start;
   }
-
+}
+@media screen and (min-width: 993px) {
   .mini-card {
     width: 100%;
     margin-left: 0%;
   }
-
+}
+@media screen and (min-width: 993px) {
   .desert {
     padding-bottom: 3px;
   }
-
+}
+@media screen and (min-width: 993px) {
   .end-comend {
     background-color: #f2f2f2;
   }
-
+}
+@media screen and (min-width: 993px) {
   .command {
     font-size: 25px;
     margin-left: 9%;

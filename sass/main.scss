@@ -5,10 +5,12 @@ $tertiare:#99E2D0;
 *{
     font-family: 'Roboto', sans-serif;
 }
+
 img{
     object-fit: cover;
    
 }
+
 @keyframes slydebar-check {
     from{
         transform: rotate(0deg);width:0px;overflow: visible; 
@@ -40,12 +42,7 @@ img{
         transform: translateY(0);
         opacity: 1;
     }
-
-    
 }
-
-
-
 
     body{
         margin: 0;
@@ -484,7 +481,7 @@ img{
     width: 12%;
     margin-left: 12px;
     font-weight: 200;
-    
+    animation: menu-come 5s;
 }
 .mini-card{
     display: flex;
@@ -497,9 +494,9 @@ img{
     margin-left: 5%;
     align-items: center;
     justify-content: space-between;
+    animation: menu-come 5s;
     
-
-
+    
 }
 
 
@@ -561,7 +558,6 @@ img{
         padding-left: 10px;
         padding-top: 22px;
         padding-bottom: 22px;
-        animation: back-apparition 4s;
         animation: slydebar-check 3s;
 
         
@@ -766,6 +762,10 @@ ul{
     body{
         width: 90%;
         margin: 0 auto ;
+
+        @media screen and (max-width:1200px) {
+            width:100%;
+        }
         
         
     }
