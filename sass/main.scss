@@ -13,18 +13,18 @@ img{
 
 @keyframes slydebar-check {
     from{
-        transform: rotate(0deg);width:0px;overflow: visible; 
+        transform: rotate(0deg);width:0px; overflow: visible; 
     }
 
     to{
-        transform: rotate(360deg);width: 100px;overflow:visible;
+        transform: rotate(360deg);width: 100px; overflow:visible; 
     }
 
 }
 @keyframes back-apparition {
     
     from{
-        transform: translate(0px);width: 12px; background-color: $tertiare ;
+        transform: translate(0px);width: 12px; background-color: $tertiare;
     }
 
     to{
@@ -35,14 +35,108 @@ img{
 }
 @keyframes menu-come {
     from{
-        transform: translateY(200px);
+        transition: translateY(200px);
         opacity: 0;
     }
     to{
-        transform: translateY(0);
+        transition: translate(0px);
         opacity: 1;
     }
 }
+
+@keyframes fade-spin {
+
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    
+}
+
+
+
+@keyframes spinload{
+    0%{
+        transform: rotate(0deg);
+        visibility: visible;
+
+    }
+    25%{
+        border-top-color: $secondary;
+        border-bottom-color: $primary;
+        visibility: visible;
+    
+    }
+    50%{
+        transform: rotate(360deg) ;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        visibility: visible;
+    }
+    75%{
+        border-top-color: $secondary;
+        border-bottom-color: $primary;
+        visibility: visible;
+    }
+    100%{
+        transform: rotate(720deg) ;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        visibility: hidden;
+        
+    }
+}
+
+
+
+
+
+
+.spinload-back{
+    visibility: hidden;
+    width: 100%;
+    height:100%;
+    background-color: $secondary;
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    position: fixed;
+    z-index: 6;
+    animation: fade-spin 5s linear;
+
+}
+.spinload{
+    visibility: hidden;
+    margin: auto;
+    border: 10px solid $tertiare;
+    width: 75px;
+    height: 75px;
+    border-top-color: $primary;
+    border-bottom-color: $secondary;
+    border-radius: 50%;
+    animation: spinload 5s linear;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top:50%;
+    bottom: 50%;
+    z-index: 7;
+
+}
+
+
+
+
+
 
     body{
         margin: 0;
@@ -251,7 +345,6 @@ img{
         .store-text{
             width: 100%;
             font-size: 20px;
-            
             
         }
         .store-i{
@@ -549,9 +642,6 @@ img{
     border-radius: 0 15px 15px 0;
     font-size: 30px;
     animation: back-apparition 4s;
-    
-
-    
     i{
         overflow: hidden;
         padding-right: 10px;
@@ -559,12 +649,7 @@ img{
         padding-top: 22px;
         padding-bottom: 22px;
         animation: slydebar-check 3s;
-
-        
     }
-
-
-    
 }
 
 
