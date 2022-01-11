@@ -1,6 +1,6 @@
-$primary:#9356DC;
-$secondary:#FF79DA;
-$tertiare:#99E2D0;
+@import "./variables";
+@import "./keyframes";
+
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -11,98 +11,6 @@ img{
    
 }
 
-@keyframes slydebar-check {
-    from{
-        transform: rotate(0deg);width:0px; overflow: visible; 
-    }
-
-    to{
-        transform: rotate(360deg);width: 100px; overflow:visible; 
-    }
-
-}
-@keyframes back-apparition {
-    
-    from{
-        transform: translate(0px);width: 12px; background-color: $tertiare;
-    }
-
-    to{
-        transform: translate(10px);width: 55px; background-color: $tertiare; 
-    }
-
-    
-}
-@keyframes menu-come {
-    from{
-        transition: translateY(200px);
-        opacity: 0;
-    }
-    to{
-        transition: translate(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes fade-spin {
-
-    0%{
-        visibility: visible;
-        opacity: 1;
-    }
-    45%{
-        opacity: 1;
-    }
-    55%{
-        opacity: 0;
-    }
-    100%{
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    
-}
-
-
-
-@keyframes spinload{
-    0%{
-        transform: rotate(0deg);
-        visibility: visible;
-
-    }
-    25%{
-        border-top-color: $secondary;
-        border-bottom-color: $primary;
-        visibility: visible;
-    
-    }
-    50%{
-        transform: rotate(360deg) ;
-        border-top-color: $primary;
-        border-bottom-color: $secondary;
-        visibility: visible;
-    }
-    75%{
-        border-top-color: $secondary;
-        border-bottom-color: $primary;
-        visibility: visible;
-    }
-    100%{
-        transform: rotate(720deg) ;
-        border-top-color: $primary;
-        border-bottom-color: $secondary;
-        visibility: hidden;
-        
-    }
-}
-
-
-
-
-
-
 .spinload-back{
     visibility: hidden;
     width: 100%;
@@ -112,6 +20,7 @@ img{
     position: fixed;
     z-index: 6;
     animation: fade-spin 5s linear;
+
 
 }
 .spinload{
@@ -132,13 +41,7 @@ img{
     z-index: 7;
 
 }
-
-
-
-
-
-
-    body{
+body{
         margin: 0;
     }
 
@@ -419,11 +322,6 @@ img{
             transform: translate(-50%, -50%);
             background-color: $tertiare;
             border-radius: 5px;
-
-            
-            
-            
-
         }
         p{
             margin-right: 10px;
@@ -452,11 +350,20 @@ img{
             display: flex;
         }
         
-        .heart-i{
+        .far.fa-heart{
             display: flex;
             font-size: 30px;
             margin-bottom: 30px;
             margin-right: 20px;
+            animation: disparition-heart  2s linear;
+        }
+
+        .fas.fa-heart{
+            color: $secondary;
+            position: absolute;
+            font-size: 30px;
+            visibility:visible;
+            animation: apparition-heart 2s linear ;
 
         }
         .card{
@@ -489,7 +396,7 @@ img{
 
 .end-comend{
     background-color: #f2f2f2;
-    ;
+    
 }
 
 .head-carte{
@@ -588,6 +495,17 @@ img{
     align-items: center;
     justify-content: space-between;
     animation: menu-come 5s;
+    &:hover .check{
+        animation: back-apparition 1s;
+        animation-fill-mode: forwards;
+        
+    }
+    &:hover .check i{
+        animation:slydebar-check 1s linear;
+        animation-fill-mode: forwards;
+        
+
+    }
     
     
 }
@@ -641,14 +559,13 @@ img{
     color: white;
     border-radius: 0 15px 15px 0;
     font-size: 30px;
-    animation: back-apparition 4s;
+    
     i{
         overflow: hidden;
         padding-right: 10px;
         padding-left: 10px;
         padding-top: 22px;
         padding-bottom: 22px;
-        animation: slydebar-check 3s;
     }
 }
 
@@ -676,6 +593,14 @@ img{
     font-weight: 300;
     background-color: $secondary;
     background-image: linear-gradient(to bottom right, $secondary, $primary);
+    transition: opacity 1s;
+
+}
+.command:hover{
+    opacity: 0.8;
+    box-shadow: 1px 1px 12px $secondary;
+    
+
 }
 footer{
     background-color: rgb(56, 51, 51);

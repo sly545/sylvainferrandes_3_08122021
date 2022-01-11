@@ -1,0 +1,84 @@
+@keyframes slydebar-check {
+    from{
+        transform: rotate(0deg);width:0px; overflow: visible;
+    }
+
+    to{
+        transform: rotate(360deg);width: 100px; overflow:visible; 
+    }
+
+}
+@keyframes back-apparition {
+    
+    from{
+        transform: translate(0px);width: 12px; background-color: $tertiare;
+    }
+
+    to{
+        transform: translate(10px);width: 55px; background-color: $tertiare; 
+
+    }
+
+    
+}
+@keyframes menu-come {
+    from{
+        transition: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transition: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-spin {
+
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    
+}
+@keyframes spinload{
+    0%{
+        transform: rotate(0deg);
+        visibility: visible;
+
+    }
+    25%{
+        border-top-color: $secondary;
+        border-bottom-color: $primary;
+        visibility: visible;
+    
+    }
+    50%{
+        transform: rotate(360deg) ;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        visibility: visible;
+    }
+    75%{
+        border-top-color: $secondary;
+        border-bottom-color: $primary;
+        visibility: visible;
+    }
+    100%{
+        transform: rotate(720deg) ;
+        border-top-color: $primary;
+        border-bottom-color: $secondary;
+        visibility: hidden;
+        
+    }
+}

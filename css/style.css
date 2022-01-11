@@ -1,12 +1,4 @@
 @charset "UTF-8";
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-img {
-  object-fit: cover;
-}
-
 @keyframes slydebar-check {
   from {
     transform: rotate(0deg);
@@ -85,6 +77,14 @@ img {
     visibility: hidden;
   }
 }
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  object-fit: cover;
+}
+
 .spinload-back {
   visibility: hidden;
   width: 100%;
@@ -384,11 +384,19 @@ form i {
 .content .nom-restaux {
   display: flex;
 }
-.content .heart-i {
+.content .far.fa-heart {
   display: flex;
   font-size: 30px;
   margin-bottom: 30px;
   margin-right: 20px;
+  animation: disparition-heart 2s linear;
+}
+.content .fas.fa-heart {
+  color: #FF79DA;
+  position: absolute;
+  font-size: 30px;
+  visibility: visible;
+  animation: apparition-heart 2s linear;
 }
 .content .card {
   position: relative;
@@ -504,6 +512,14 @@ form i {
   justify-content: space-between;
   animation: menu-come 5s;
 }
+.mini-card:hover .check {
+  animation: back-apparition 1s;
+  animation-fill-mode: forwards;
+}
+.mini-card:hover .check i {
+  animation: slydebar-check 1s linear;
+  animation-fill-mode: forwards;
+}
 
 .contnere-text-minicard {
   display: flex;
@@ -542,7 +558,6 @@ form i {
   color: white;
   border-radius: 0 15px 15px 0;
   font-size: 30px;
-  animation: back-apparition 4s;
 }
 .check i {
   overflow: hidden;
@@ -550,7 +565,6 @@ form i {
   padding-left: 10px;
   padding-top: 22px;
   padding-bottom: 22px;
-  animation: slydebar-check 3s;
 }
 
 .money {
@@ -572,6 +586,12 @@ form i {
   font-weight: 300;
   background-color: #FF79DA;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  transition: opacity 1s;
+}
+
+.command:hover {
+  opacity: 0.8;
+  box-shadow: 1px 1px 12px #FF79DA;
 }
 
 footer {
