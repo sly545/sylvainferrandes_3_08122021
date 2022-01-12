@@ -82,3 +82,32 @@
         
     }
 }
+@keyframes disparition-heart{
+
+
+    0%{
+        transition: translateY(200px);
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        transition: translate(0px) 1s;
+        opacity: 0;
+        visibility: visible;    
+
+    }
+
+    
+}
+
+
+@keyframes apparition-heart {
+    from{
+        transform: rotate(0deg);width:0px; overflow: visible;
+    }
+
+    to{
+        transform: rotate(360deg);width: 100px; overflow:visible; 
+    }
+    
+}

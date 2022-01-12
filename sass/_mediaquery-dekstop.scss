@@ -1,0 +1,185 @@
+/* rajouter cette media queri dan sun fichier a par (desktop) */
+
+@media screen and (min-width: 993px){
+
+
+    .logo-carte{
+        margin-right: 16%;
+        justify-content: center;
+
+        img{
+            width: 39%; 
+        }
+    }
+    body{
+        width: 90%;
+        margin: 0 auto ;
+
+        @media screen and (max-width:1200px) {
+            width:100%;
+        }
+        
+        
+    }
+    
+    .rom{
+        margin-top: 5px;
+
+        img{
+            width: 35%;
+        }
+    }
+    .title{
+        font-size: 17px;
+    }
+
+
+    .choice{
+        display: flex;
+        flex-direction: row;
+        height: 95px;
+        justify-content: space-around;
+    }
+
+    .phone{
+        margin-right: 5px;
+
+        i{
+            margin-left: 0px;
+        }
+    }
+    .side-bar{
+        margin-right: 5px;
+
+        i{
+            margin-left: 0px;
+        }
+    }
+    
+    .T1{
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .title-restau {
+        
+
+        h2{
+            margin-left:0%;
+            text-align: center;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        h2{
+            font-size: 20px;
+        }
+
+        .card-new{
+            width: 40%;
+            margin-left: 6%;
+
+        }
+        .card{
+            width: 40%;
+            margin-left: 6%;
+        }
+        
+    }
+
+
+    .new-tabs{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-nonew-tabs{
+        display: flex;
+        flex-direction: row;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        
+        img{
+            width: 190px;
+            position: absolute;
+
+        }
+
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+
+            p{
+                margin-top: 55px;
+                margin-right: 25px;
+            }
+        }
+    }
+
+    
+
+    .texte-menu{
+        
+        width: 100%;
+        display: flex;
+        position: unset;
+        border-radius: unset;
+        justify-content: space-around;
+        h1{
+            font-size: 35px;
+        }
+    }
+    .Entrée{
+        padding-top: 0%;
+    }
+
+    .fond{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .mini-card{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .desert{
+        padding-bottom: 3px;
+    }
+    .end-comend{
+        background-color:#f2f2f2;
+    }
+    .command{
+        font-size: 25px;
+        margin-left: 9%;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+

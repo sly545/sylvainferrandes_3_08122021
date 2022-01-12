@@ -1,0 +1,111 @@
+/* rajouter cette media queri (tablette) dan sun fichier a par */
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+    .choice{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: 95px;
+        
+
+        
+    }
+    .fond{
+        padding-bottom: 10px;
+    }
+
+    .phone{
+        margin-right: 5px;
+
+        i{
+            margin-left: 0px;
+        }
+    }
+    .side-bar{
+        margin-right: 5px;
+
+        i{
+            margin-left: 0px;
+        }
+    }
+    
+    .T1{
+        margin-left: 38%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+
+    .title-restau {
+        
+
+        h2{
+            margin-left: 38%;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        h2{
+            font-size: 20px;
+        }
+        
+    }
+
+
+    .new-tabs{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-nonew-tabs{
+        display: flex;
+        flex-direction: row;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        
+        img{
+            width: 200px;
+            position: absolute;
+
+        }
+
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+
+            p{
+                margin-top: 55px;
+                margin-right: 25px;
+            }
+        }
+    }
+
+    .texte-menu{
+        top: 300px;
+        
+        h1{
+            font-size: 35px;
+        }
+    }
+    
+
+    .command{
+        font-size: 25px;
+        margin-left: 9%;
+    }
+    .end-comend{
+        background-color: #f2f2f2;
+    }
+    
+
+    
+        
+}

@@ -1,5 +1,7 @@
 @import "./variables";
 @import "./keyframes";
+@import "./_mediaquery-tablette.scss";
+@import "./mediaquery-dekstop";
 
 
 *{
@@ -34,7 +36,7 @@ img{
     border-radius: 50%;
     animation: spinload 5s linear;
     position: fixed;
-    left: 50%;
+    left: 40%;
     right: 50%;
     top:50%;
     bottom: 50%;
@@ -259,8 +261,7 @@ body{
         }
     }
     .title-restau{
-
-        background-color: #f2f2f2;
+            background-color: #f2f2f2;
         
         h2{
             margin-left: 12%;
@@ -309,6 +310,8 @@ body{
             margin-left: 12px;
             margin-right: 5px;
             margin-bottom: 35px; 
+
+           
             img{
                 width: 100%;
                 border-radius: 20px 20px 0px 0px;
@@ -348,23 +351,42 @@ body{
         }
         .nom-restaux{
             display: flex;
+            
+            
         }
         
         .far.fa-heart{
             display: flex;
-            font-size: 30px;
+            position: absolute;
+            top: 82%;
+            right: 5%;
+            font-size: 34px;
             margin-bottom: 30px;
             margin-right: 20px;
-            animation: disparition-heart  2s linear;
+            z-index: 3;
+
+
+           
+
+            
         }
+        .far.fa-heart:hover{
+            animation: disparition-heart 1s;
+            animation-fill-mode: forwards;
+            
+            
+        }
+
 
         .fas.fa-heart{
             color: $secondary;
             position: absolute;
-            font-size: 30px;
-            visibility:visible;
-            animation: apparition-heart 2s linear ;
-
+            top:80%;
+            right: 19%;
+            font-size: 43px;
+            overflow: visible;
+            z-index: 2;
+            width: 0%;
         }
         .card{
             position: relative;
@@ -375,6 +397,8 @@ body{
             margin-left: 12px;
             margin-right: 5px;
             margin-bottom: 35px; 
+
+            
             img{
                 width: 100%;
                 border-radius: 20px 20px 0px 0px;
@@ -648,6 +672,11 @@ ul{
 
 @media screen and (min-width: 768px) and (max-width: 992px){
 
+
+    .spinload{
+        left: 45%;
+    }
+
     .choice{
         display: flex;
         flex-direction: row;
@@ -760,7 +789,7 @@ ul{
 
 @media screen and (min-width: 993px){
 
-
+    
     .logo-carte{
         margin-right: 16%;
         justify-content: center;
@@ -769,15 +798,31 @@ ul{
             width: 39%; 
         }
     }
+    
+
     body{
         width: 90%;
-        margin: 0 auto ;
+        margin: 0 auto;
 
         @media screen and (max-width:1200px) {
             width:100%;
+
+            .spinload-back{
+                width: 100%;
+
+            }
+
+            
         }
         
         
+       
+    }
+    .spinload-back{
+        width: 90%;
+    }
+    .spinload{
+        left: 48%;
     }
     
     .rom{
@@ -906,8 +951,6 @@ ul{
         align-items: center;
         justify-content: space-around;
         align-items: flex-start;
-
-
     }
     .mini-card{
         width: 100%;

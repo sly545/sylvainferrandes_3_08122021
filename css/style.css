@@ -77,6 +77,288 @@
     visibility: hidden;
   }
 }
+@keyframes disparition-heart {
+  0% {
+    transition: translateY(200px);
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    transition: translate(0px) 1s;
+    opacity: 0;
+    visibility: visible;
+  }
+}
+@keyframes apparition-heart {
+  from {
+    transform: rotate(0deg);
+    width: 0px;
+    overflow: visible;
+  }
+  to {
+    transform: rotate(360deg);
+    width: 100px;
+    overflow: visible;
+  }
+}
+/* rajouter cette media queri (tablette) dan sun fichier a par */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .choice {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 95px;
+  }
+
+  .fond {
+    padding-bottom: 10px;
+  }
+
+  .phone {
+    margin-right: 5px;
+  }
+  .phone i {
+    margin-left: 0px;
+  }
+
+  .side-bar {
+    margin-right: 5px;
+  }
+  .side-bar i {
+    margin-left: 0px;
+  }
+
+  .T1 {
+    margin-left: 38%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .title-restau h2 {
+    margin-left: 38%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .new-tabs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-nonew-tabs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  footer img {
+    width: 200px;
+    position: absolute;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul p {
+    margin-top: 55px;
+    margin-right: 25px;
+  }
+
+  .texte-menu {
+    top: 300px;
+  }
+  .texte-menu h1 {
+    font-size: 35px;
+  }
+
+  .command {
+    font-size: 25px;
+    margin-left: 9%;
+  }
+
+  .end-comend {
+    background-color: #f2f2f2;
+  }
+}
+/* rajouter cette media queri dan sun fichier a par (desktop) */
+@media screen and (min-width: 993px) {
+  .logo-carte {
+    margin-right: 16%;
+    justify-content: center;
+  }
+  .logo-carte img {
+    width: 39%;
+  }
+
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .rom {
+    margin-top: 5px;
+  }
+  .rom img {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .title {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .choice {
+    display: flex;
+    flex-direction: row;
+    height: 95px;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 993px) {
+  .phone {
+    margin-right: 5px;
+  }
+  .phone i {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .side-bar {
+    margin-right: 5px;
+  }
+  .side-bar i {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .T1 {
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  .title-restau h2 {
+    margin-left: 0%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 993px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+  .content .card-new {
+    width: 40%;
+    margin-left: 6%;
+  }
+  .content .card {
+    width: 40%;
+    margin-left: 6%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .new-tabs {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 993px) {
+  .card-nonew-tabs {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 993px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  footer img {
+    width: 190px;
+    position: absolute;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul p {
+    margin-top: 55px;
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .texte-menu {
+    width: 100%;
+    display: flex;
+    position: unset;
+    border-radius: unset;
+    justify-content: space-around;
+  }
+  .texte-menu h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .Entrée {
+    padding-top: 0%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .fond {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 993px) {
+  .mini-card {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .desert {
+    padding-bottom: 3px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .end-comend {
+    background-color: #f2f2f2;
+  }
+}
+@media screen and (min-width: 993px) {
+  .command {
+    font-size: 25px;
+    margin-left: 9%;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -107,7 +389,7 @@ img {
   border-radius: 50%;
   animation: spinload 5s linear;
   position: fixed;
-  left: 50%;
+  left: 40%;
   right: 50%;
   top: 50%;
   bottom: 50%;
@@ -386,17 +668,27 @@ form i {
 }
 .content .far.fa-heart {
   display: flex;
-  font-size: 30px;
+  position: absolute;
+  top: 82%;
+  right: 5%;
+  font-size: 34px;
   margin-bottom: 30px;
   margin-right: 20px;
-  animation: disparition-heart 2s linear;
+  z-index: 3;
+}
+.content .far.fa-heart:hover {
+  animation: disparition-heart 1s;
+  animation-fill-mode: forwards;
 }
 .content .fas.fa-heart {
   color: #FF79DA;
   position: absolute;
-  font-size: 30px;
-  visibility: visible;
-  animation: apparition-heart 2s linear;
+  top: 80%;
+  right: 19%;
+  font-size: 43px;
+  overflow: visible;
+  z-index: 2;
+  width: 0%;
 }
 .content .card {
   position: relative;
@@ -628,6 +920,10 @@ footer ul p {
 
 /* rajouter cette media queri (tablette) dan sun fichier a par */
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .spinload {
+    left: 45%;
+  }
+
   .choice {
     display: flex;
     flex-direction: row;
@@ -734,6 +1030,19 @@ footer ul p {
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   body {
     width: 100%;
+  }
+  body .spinload-back {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .spinload-back {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .spinload {
+    left: 48%;
   }
 }
 @media screen and (min-width: 993px) {
