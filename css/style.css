@@ -666,29 +666,38 @@ form i {
 .content .nom-restaux {
   display: flex;
 }
-.content .far.fa-heart {
+.content .heart-i {
   display: flex;
   position: absolute;
-  top: 82%;
-  right: 5%;
-  font-size: 34px;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  z-index: 3;
+  top: 87%;
+  right: 10%;
 }
-.content .far.fa-heart:hover {
-  animation: disparition-heart 1s;
-  animation-fill-mode: forwards;
-}
-.content .fas.fa-heart {
-  color: #FF79DA;
+.content .heart-i .far.fa-heart {
   position: absolute;
-  top: 80%;
-  right: 19%;
-  font-size: 43px;
-  overflow: visible;
+  top: 12%;
+  color: black;
+  font-size: 29px;
   z-index: 2;
-  width: 0%;
+  overflow: visible;
+}
+.content .heart-i .far.fa-heart:hover {
+  transition: 1s;
+  overflow: hidden;
+  z-index: 2;
+}
+.content .heart-i .fas.fa-heart {
+  position: absolute;
+  font-size: 25px;
+  overflow: visible;
+  z-index: 3;
+  color: white;
+  padding: 2px;
+  top: 0px;
+}
+.content .heart-i .fas.fa-heart:hover {
+  color: #FF79DA;
+  font-size: 25px;
+  transition: 0.5s;
 }
 .content .card {
   position: relative;

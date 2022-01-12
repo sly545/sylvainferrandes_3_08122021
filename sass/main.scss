@@ -355,38 +355,46 @@ body{
             
         }
         
-        .far.fa-heart{
+        .heart-i{
             display: flex;
             position: absolute;
-            top: 82%;
-            right: 5%;
-            font-size: 34px;
-            margin-bottom: 30px;
-            margin-right: 20px;
-            z-index: 3;
+            top: 87%;
+            right: 10%;
 
+            .far.fa-heart{
+                position: absolute;
+                top: 12%;
+                color: black;
+                font-size: 29px;
+                z-index: 2;
+                overflow: visible;
+                &:hover{
+                    transition: 1s;
+                    overflow: hidden;
+                    z-index: 2;
+                }
+                
+                
+             
 
-           
+            }
+            .fas.fa-heart{
+                position: absolute;
+                font-size: 25px;
+                overflow: visible;
+                z-index: 3;
+                color: white;
+                padding: 2px;
+                top: 0px;
+                
+                &:hover{
+                    color: $secondary;
+                    font-size: 25px;
+                    transition: .5s;
+                }
 
+            }
             
-        }
-        .far.fa-heart:hover{
-            animation: disparition-heart 1s;
-            animation-fill-mode: forwards;
-            
-            
-        }
-
-
-        .fas.fa-heart{
-            color: $secondary;
-            position: absolute;
-            top:80%;
-            right: 19%;
-            font-size: 43px;
-            overflow: visible;
-            z-index: 2;
-            width: 0%;
         }
         .card{
             position: relative;
