@@ -24,13 +24,23 @@
   }
 }
 @keyframes menu-come {
-  from {
-    transition: translateY(200px);
+  0% {
+    transform: translateY(-10px);
     opacity: 0;
   }
-  to {
-    transition: translate(0px);
+  100% {
+    transform: translateY(0px);
     opacity: 1;
+  }
+}
+@keyframes mini-comes {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes fade-spin {
@@ -191,174 +201,6 @@
     background-color: #f2f2f2;
   }
 }
-/* rajouter cette media queri dan sun fichier a par (desktop) */
-@media screen and (min-width: 993px) {
-  .logo-carte {
-    margin-right: 16%;
-    justify-content: center;
-  }
-  .logo-carte img {
-    width: 39%;
-  }
-
-  body {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-  body {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 993px) {
-  .rom {
-    margin-top: 5px;
-  }
-  .rom img {
-    width: 35%;
-  }
-}
-@media screen and (min-width: 993px) {
-  .title {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .choice {
-    display: flex;
-    flex-direction: row;
-    height: 95px;
-    justify-content: space-around;
-  }
-}
-@media screen and (min-width: 993px) {
-  .phone {
-    margin-right: 5px;
-  }
-  .phone i {
-    margin-left: 0px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .side-bar {
-    margin-right: 5px;
-  }
-  .side-bar i {
-    margin-left: 0px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .T1 {
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 993px) {
-  .title-restau h2 {
-    margin-left: 0%;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 993px) {
-  .content {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  .content h2 {
-    font-size: 20px;
-  }
-  .content .card-new {
-    width: 40%;
-    margin-left: 6%;
-  }
-  .content .card {
-    width: 40%;
-    margin-left: 6%;
-  }
-}
-@media screen and (min-width: 993px) {
-  .new-tabs {
-    display: flex;
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 993px) {
-  .card-nonew-tabs {
-    display: flex;
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 993px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-  }
-  footer img {
-    width: 190px;
-    position: absolute;
-  }
-  footer ul {
-    display: flex;
-    flex-direction: row;
-  }
-  footer ul p {
-    margin-top: 55px;
-    margin-right: 25px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .texte-menu {
-    width: 100%;
-    display: flex;
-    position: unset;
-    border-radius: unset;
-    justify-content: space-around;
-  }
-  .texte-menu h1 {
-    font-size: 35px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .Entrée {
-    padding-top: 0%;
-  }
-}
-@media screen and (min-width: 993px) {
-  .fond {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-}
-@media screen and (min-width: 993px) {
-  .mini-card {
-    width: 100%;
-    margin-left: 0%;
-  }
-}
-@media screen and (min-width: 993px) {
-  .desert {
-    padding-bottom: 3px;
-  }
-}
-@media screen and (min-width: 993px) {
-  .end-comend {
-    background-color: #f2f2f2;
-  }
-}
-@media screen and (min-width: 993px) {
-  .command {
-    font-size: 25px;
-    margin-left: 9%;
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -472,6 +314,11 @@ form i {
   background-color: #FF79DA;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
+.navi a:hover {
+  transition: 1s;
+  opacity: 0.8;
+  box-shadow: 1px 1px 12px #FF79DA;
+}
 
 .T1 {
   margin-top: 45px;
@@ -500,6 +347,11 @@ form i {
   margin-right: 5px;
   margin-bottom: 20px;
   box-shadow: 1px 1px 12px #b4b3b3;
+}
+.choice .phone a:hover {
+  background-color: #f5eeff;
+  box-shadow: 1px 1px 12px #FF79DA;
+  transition: 1s;
 }
 .choice .number-one p {
   background-color: #9356DC;
@@ -534,6 +386,11 @@ form i {
   margin-bottom: 20px;
   box-shadow: 1px 1px 12px #b4b3b3;
 }
+.choice .side-bar a:hover {
+  background-color: #f5eeff;
+  box-shadow: 1px 1px 12px #FF79DA;
+  transition: 1s;
+}
 .choice .number-two p {
   background-color: #9356DC;
   border-radius: 25px;
@@ -566,6 +423,11 @@ form i {
   margin-right: 5px;
   margin-bottom: 100px;
   box-shadow: 1px 1px 12px #b4b3b3;
+}
+.choice .store a:hover {
+  background-color: #f5eeff;
+  box-shadow: 1px 1px 12px #FF79DA;
+  transition: 1s;
 }
 .choice .number-three p {
   background-color: #9356DC;
@@ -631,6 +493,10 @@ form i {
   margin-right: 5px;
   margin-bottom: 35px;
 }
+.content .card-new:hover {
+  transition: 0.8s;
+  box-shadow: 1px 1px 12px #FF79DA;
+}
 .content .card-new img {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
@@ -679,6 +545,7 @@ form i {
   font-size: 29px;
   z-index: 2;
   overflow: visible;
+  background: white;
 }
 .content .heart-i .far.fa-heart:hover {
   transition: 1s;
@@ -708,6 +575,10 @@ form i {
   margin-left: 12px;
   margin-right: 5px;
   margin-bottom: 35px;
+}
+.content .card:hover {
+  transition: 0.8s;
+  box-shadow: 1px 1px 12px #FF79DA;
 }
 .content .card img {
   width: 100%;
@@ -789,6 +660,18 @@ form i {
 
 .Entrée {
   padding-top: 35px;
+  animation: mini-comes 1s;
+  transform: 2ms;
+}
+
+.plats {
+  animation: mini-comes 2s;
+  transition: 0.5s;
+}
+
+.desert {
+  animation: mini-comes 3s;
+  transition: 0.6s;
 }
 
 .intitu {
@@ -797,10 +680,10 @@ form i {
   width: 12%;
   margin-left: 12px;
   font-weight: 200;
-  animation: menu-come 5s;
 }
 
 .mini-card {
+  height: 74px;
   display: flex;
   flex-direction: row;
   background-color: white;
@@ -811,7 +694,7 @@ form i {
   margin-left: 5%;
   align-items: center;
   justify-content: space-between;
-  animation: menu-come 5s;
+  animation: mini-comes 1s;
 }
 .mini-card:hover .check {
   animation: back-apparition 1s;
@@ -1182,7 +1065,7 @@ footer ul p {
 }
 @media screen and (min-width: 993px) {
   .mini-card {
-    width: 100%;
+    width: 320px;
     margin-left: 0%;
   }
 }

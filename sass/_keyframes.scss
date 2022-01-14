@@ -22,13 +22,25 @@
     
 }
 @keyframes menu-come {
-    from{
-        transition: translateY(200px);
+    0%{
+        transform:translateY(-10px);
         opacity: 0;
     }
-    to{
-        transition: translate(0px);
+    100%{
+        transform:translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes mini-comes {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

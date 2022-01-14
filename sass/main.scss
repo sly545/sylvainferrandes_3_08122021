@@ -1,7 +1,6 @@
 @import "./variables";
 @import "./keyframes";
-@import "./_mediaquery-tablette.scss";
-@import "./mediaquery-dekstop";
+@import "./mediaquery-tablette";
 
 
 *{
@@ -104,10 +103,11 @@ body{
 }
     .navi{
         background-color:#f2f2f2;
-        
         text-align: center;
         display: flex;
         justify-content: center;
+
+        
         
 
         a{
@@ -121,6 +121,11 @@ body{
             font-weight: 300;
             background-color: $secondary;
             background-image: linear-gradient(to bottom right, $secondary, $primary);
+            &:hover{
+                transition: 1s;
+                opacity: 0.8;
+                box-shadow: 1px 1px 12px $secondary;
+            }
 
         }
     }
@@ -156,6 +161,14 @@ body{
             margin-right: 5px; 
             margin-bottom: 20px;
             box-shadow: 1px 1px 12px #b4b3b3;
+
+            &:hover{
+                background-color: #f5eeff;
+                box-shadow: 1px 1px 12px $secondary;
+                transition: 1s; 
+            }
+
+            
         }
 
         .number-one p{
@@ -195,6 +208,11 @@ body{
             margin-right: 5px;
             margin-bottom: 20px;
             box-shadow: 1px 1px 12px #b4b3b3; 
+            &:hover{
+                background-color: #f5eeff;
+                box-shadow: 1px 1px 12px $secondary;
+                transition: 1s; 
+            }
         }
 
         .number-two p{
@@ -234,6 +252,11 @@ body{
             margin-right: 5px; 
             margin-bottom: 100px;
             box-shadow: 1px 1px 12px #b4b3b3;
+            &:hover{
+                background-color: #f5eeff;
+                box-shadow: 1px 1px 12px $secondary;
+                transition: 1s;
+            }
         }
 
         .number-three p{
@@ -311,6 +334,11 @@ body{
             margin-right: 5px;
             margin-bottom: 35px; 
 
+            &:hover{
+                transition: .8s;
+                box-shadow: 1px 1px 12px $secondary;
+            }
+
            
             img{
                 width: 100%;
@@ -368,10 +396,13 @@ body{
                 font-size: 29px;
                 z-index: 2;
                 overflow: visible;
+                background: white;
+
                 &:hover{
                     transition: 1s;
                     overflow: hidden;
                     z-index: 2;
+
                 }
                 
                 
@@ -405,6 +436,10 @@ body{
             margin-left: 12px;
             margin-right: 5px;
             margin-bottom: 35px; 
+            &:hover{
+                transition: .8s;
+                box-shadow: 1px 1px 12px $secondary;
+            }
 
             
             img{
@@ -502,6 +537,21 @@ body{
 
 .Entrée{
     padding-top: 35px;
+    
+    animation: mini-comes 1s;
+    transform: 2ms;
+    
+}
+.plats{
+    
+    animation: mini-comes 2s;
+    transition: .5s;
+
+}
+.desert{
+    
+    animation: mini-comes 3s;
+    transition: .6s;
 }
 
 
@@ -513,9 +563,9 @@ body{
     width: 12%;
     margin-left: 12px;
     font-weight: 200;
-    animation: menu-come 5s;
 }
 .mini-card{
+    height: 74px;
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -526,7 +576,11 @@ body{
     margin-left: 5%;
     align-items: center;
     justify-content: space-between;
-    animation: menu-come 5s;
+    animation: mini-comes 1s;
+    
+    
+    
+    
     &:hover .check{
         animation: back-apparition 1s;
         animation-fill-mode: forwards;
@@ -558,10 +612,6 @@ body{
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-    
-        
-
-    
     }
     h3{
         font-weight: 300;
@@ -961,7 +1011,7 @@ ul{
         align-items: flex-start;
     }
     .mini-card{
-        width: 100%;
+        width: 320px;
         margin-left: 0%;
     }
     .desert{
