@@ -369,7 +369,7 @@ body{
             flex-direction: row;
             justify-content: space-between;
             width: 95%;
-            align-items: flex-end;
+            align-items: center;
 
         }
         .contener-t{
@@ -385,44 +385,24 @@ body{
         
         .heart-i{
             display: flex;
-            position: absolute;
-            top: 87%;
-            right: 10%;
+            
 
-            .far.fa-heart{
+            .heart-card-full{   
                 position: absolute;
-                top: 12%;
-                color: black;
-                font-size: 29px;
                 z-index: 2;
                 overflow: visible;
-                background: white;
-
-                &:hover{
-                    transition: 1s;
-                    overflow: hidden;
-                    z-index: 2;
-
-                }
-                
-                
-             
-
+                width: 100px;
             }
-            .fas.fa-heart{
-                position: absolute;
-                font-size: 25px;
+            .heart-card-empty{
+                display: flex;
                 overflow: visible;
                 z-index: 3;
-                color: white;
-                padding: 2px;
-                top: 0px;
-                
+                width: 100px;
                 &:hover{
-                    color: $secondary;
-                    font-size: 25px;
-                    transition: .5s;
+                    animation: disparition-heart 1s;
+                    animation-fill-mode: forwards;
                 }
+                
 
             }
             
@@ -480,6 +460,7 @@ body{
     margin-bottom: 15px;
     margin-top: 15px;
     align-items: center;
+    
 
 
     img{
@@ -516,7 +497,7 @@ body{
     flex-direction: row;
     background-color: #f2f2f2;
     justify-content: space-around;
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     position: absolute;
     top: 287px;
     align-items: center;
@@ -532,25 +513,57 @@ body{
         font-size: 25px;
         font-weight: lighter;
     }
+    .menu-heart{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 30%;
+        
+    
+        .empty{
+            width: 100px;
+            position: absolute;
+            display: flex;
+
+            &:hover{
+                animation: disparition-heart 1s;
+                animation-fill-mode: forwards;
+            }
+            
+        }   
+    
+        .full{
+            display: flex;
+            width: 100px;
+            position: absolute;
+        }
+    
+    
+    
+        
+    
+    
+    }
+
 }
 
-
+    
 .Entrée{
     padding-top: 35px;
+    animation: mini-comes  2s;
+    transition: .3s;
     
-    animation: mini-comes 1s;
-    transform: 2ms;
     
 }
 .plats{
-    
-    animation: mini-comes 2s;
+
+    animation: mini-comes  4s;
     transition: .5s;
+    
 
 }
 .desert{
-    
-    animation: mini-comes 3s;
+    animation: mini-comes 5s;
     transition: .6s;
 }
 
@@ -592,6 +605,10 @@ body{
         
 
     }
+    &:hover .prix{
+        width: auto;
+    }
+    
     
     
 }
@@ -630,6 +647,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    width: 10px;
     
     
 }
@@ -853,11 +871,22 @@ ul{
         justify-content: center;
 
         img{
-            width: 39%; 
+            width: 39%;
+            margin-right: 203px; 
+        }
+
+        a{
+            margin-right: 33%;
+        }
+        i{
+            font-size: 39px;
+
+            &:hover{
+                transition: .5s;
+                color: $secondary;
+            }
         }
     }
-    
-
     body{
         width: 90%;
         margin: 0 auto;
@@ -869,18 +898,18 @@ ul{
                 width: 100%;
 
             }
-
-            
         }
-        
-        
-       
     }
+
     .spinload-back{
         width: 90%;
     }
     .spinload{
         left: 48%;
+    }
+
+    .menu-title img{
+        border-radius: 25px 25px 0 0;
     }
     
     .rom{
@@ -923,6 +952,7 @@ ul{
         margin-bottom: 20px;
         text-align: center;
     }
+
 
     .title-restau {
         
@@ -998,6 +1028,10 @@ ul{
         h1{
             font-size: 35px;
         }
+
+        .menu-heart{
+            margin-right: 5%;
+        }
     }
     .Entrée{
         padding-top: 0%;
@@ -1024,9 +1058,6 @@ ul{
         font-size: 25px;
         margin-left: 9%;
     }
-
-
-
 }
 
 

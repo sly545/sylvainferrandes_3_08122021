@@ -89,12 +89,12 @@
 }
 @keyframes disparition-heart {
   0% {
-    transition: translateY(200px);
+    transition: 1s;
     opacity: 1;
     visibility: visible;
   }
   100% {
-    transition: translate(0px) 1s;
+    transition: 1s;
     opacity: 0;
     visibility: visible;
   }
@@ -522,7 +522,7 @@ form i {
   flex-direction: row;
   justify-content: space-between;
   width: 95%;
-  align-items: flex-end;
+  align-items: center;
 }
 .content .contener-t {
   display: flex;
@@ -534,37 +534,22 @@ form i {
 }
 .content .heart-i {
   display: flex;
-  position: absolute;
-  top: 87%;
-  right: 10%;
 }
-.content .heart-i .far.fa-heart {
+.content .heart-i .heart-card-full {
   position: absolute;
-  top: 12%;
-  color: black;
-  font-size: 29px;
   z-index: 2;
   overflow: visible;
-  background: white;
+  width: 100px;
 }
-.content .heart-i .far.fa-heart:hover {
-  transition: 1s;
-  overflow: hidden;
-  z-index: 2;
-}
-.content .heart-i .fas.fa-heart {
-  position: absolute;
-  font-size: 25px;
+.content .heart-i .heart-card-empty {
+  display: flex;
   overflow: visible;
   z-index: 3;
-  color: white;
-  padding: 2px;
-  top: 0px;
+  width: 100px;
 }
-.content .heart-i .fas.fa-heart:hover {
-  color: #FF79DA;
-  font-size: 25px;
-  transition: 0.5s;
+.content .heart-i .heart-card-empty:hover {
+  animation: disparition-heart 1s;
+  animation-fill-mode: forwards;
 }
 .content .card {
   position: relative;
@@ -643,7 +628,7 @@ form i {
   flex-direction: row;
   background-color: #f2f2f2;
   justify-content: space-around;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
   position: absolute;
   top: 287px;
   align-items: center;
@@ -657,20 +642,40 @@ form i {
   font-size: 25px;
   font-weight: lighter;
 }
+.texte-menu .menu-heart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30%;
+}
+.texte-menu .menu-heart .empty {
+  width: 100px;
+  position: absolute;
+  display: flex;
+}
+.texte-menu .menu-heart .empty:hover {
+  animation: disparition-heart 1s;
+  animation-fill-mode: forwards;
+}
+.texte-menu .menu-heart .full {
+  display: flex;
+  width: 100px;
+  position: absolute;
+}
 
 .Entrée {
   padding-top: 35px;
-  animation: mini-comes 1s;
-  transform: 2ms;
+  animation: mini-comes 2s;
+  transition: 0.3s;
 }
 
 .plats {
-  animation: mini-comes 2s;
+  animation: mini-comes 4s;
   transition: 0.5s;
 }
 
 .desert {
-  animation: mini-comes 3s;
+  animation: mini-comes 5s;
   transition: 0.6s;
 }
 
@@ -704,6 +709,9 @@ form i {
   animation: slydebar-check 1s linear;
   animation-fill-mode: forwards;
 }
+.mini-card:hover .prix {
+  width: auto;
+}
 
 .contnere-text-minicard {
   display: flex;
@@ -733,6 +741,7 @@ form i {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  width: 10px;
 }
 
 .check {
@@ -912,6 +921,17 @@ footer ul p {
   }
   .logo-carte img {
     width: 39%;
+    margin-right: 203px;
+  }
+  .logo-carte a {
+    margin-right: 33%;
+  }
+  .logo-carte i {
+    font-size: 39px;
+  }
+  .logo-carte i:hover {
+    transition: 0.5s;
+    color: #FF79DA;
   }
 
   body {
@@ -935,6 +955,11 @@ footer ul p {
 @media screen and (min-width: 993px) {
   .spinload {
     left: 48%;
+  }
+}
+@media screen and (min-width: 993px) {
+  .menu-title img {
+    border-radius: 25px 25px 0 0;
   }
 }
 @media screen and (min-width: 993px) {
@@ -1047,6 +1072,9 @@ footer ul p {
   }
   .texte-menu h1 {
     font-size: 35px;
+  }
+  .texte-menu .menu-heart {
+    margin-right: 5%;
   }
 }
 @media screen and (min-width: 993px) {

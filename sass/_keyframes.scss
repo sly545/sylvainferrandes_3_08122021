@@ -98,12 +98,12 @@
 
 
     0%{
-        transition: translateY(200px);
+        transition: 1s;
         opacity: 1;
         visibility: visible;
     }
     100%{
-        transition: translate(0px) 1s;
+        transition: 1s;
         opacity: 0;
         visibility: visible;    
 
