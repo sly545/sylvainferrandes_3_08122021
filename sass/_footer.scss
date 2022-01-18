@@ -1,0 +1,41 @@
+footer{
+    background-color: rgb(56, 51, 51);
+    color: white;
+    height: auto;
+    
+    img{
+        margin-left: 15px;
+        margin-top: 15px;
+        width: 145px;
+    }
+
+
+
+li{
+    list-style-type: none;
+    margin-bottom: 12px;
+
+    a{
+        color: white;
+    }
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    margin-bottom: 0;
+
+    
+    i{
+        display: flex;
+        margin-right: 8px;
+    }
+
+    p{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+   
+
+}

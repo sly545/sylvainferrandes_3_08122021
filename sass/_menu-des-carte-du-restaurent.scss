@@ -1,0 +1,135 @@
+    
+.Entrée{
+    opacity: 0;
+    transform: translateY(-100px);
+    padding-top: 35px ;
+    animation: mini-comes  2s forwards;
+    
+    
+}
+.plats{
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: mini-comes  2s forwards;
+    animation-delay: 1s;
+    
+    
+
+}
+.desert{
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: mini-comes 2s forwards;
+    animation-delay: 2s;
+
+
+}
+
+
+
+
+.intitu{
+    margin-top: 55px;
+    border-bottom: solid 3px $tertiare;
+    width: 12%;
+    margin-left: 12px;
+    font-weight: 200;
+}
+.mini-card{
+    height: 74px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 1px 1px 12px #b4b3b3;
+    border-radius: 25px;
+    margin-bottom: 18px;
+    margin-right: 5%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    
+    
+    
+    &:hover .check{
+        animation: back-apparition 1s;
+        animation-fill-mode: forwards;
+        
+    }
+    &:hover .check i{
+        animation:slydebar-check 1s linear;
+        animation-fill-mode: forwards;
+        
+
+    }
+    &:hover .prix{
+        width: auto;
+    }
+    
+    
+    
+}
+
+
+.contnere-text-minicard{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+
+    h2{
+        font-size: 14px;
+        padding-left: 17px;
+        margin-bottom: auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    h3{
+        font-weight: 300;
+        font-size: 12px;
+        padding-left: 17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+
+    }
+   
+}
+
+.prix{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 43px;
+    
+    
+}
+
+.check {
+    overflow: hidden;
+    width:0%;
+    display: flex;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    font-size: 30px;
+    
+    i{
+        overflow: hidden;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+}
+
+
+.money{
+    display: flex;
+    padding-top: 23px;
+    margin-right: 10px;
+}

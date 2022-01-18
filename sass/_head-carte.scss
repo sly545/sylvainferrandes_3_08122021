@@ -1,0 +1,122 @@
+.head-carte{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top:15px;
+
+}
+
+.logo-carte{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    align-items: center;
+    
+
+
+    img{
+        width: 45%;
+    }
+    i{
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 20%;
+
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        margin-right: 20%;
+    }
+}
+
+.menu-title{
+    display: flex;
+    flex-direction: column;
+
+    img{
+        width: 100%;
+    }
+
+
+}
+.texte-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    top: 290px;
+    align-items: center;
+    
+
+
+    h1{
+        padding-left: 20px;
+        font-size: 23px;
+        font-family : 'Shrikhand';
+        margin-right: 13px;
+
+        
+
+
+
+    }
+    i{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .menu-heart{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        @media screen and (max-width:320px){
+            position:absolute;
+            right: 0%;
+            
+        }
+        
+    
+        .empty{
+            width: 85px;
+            position: absolute;
+            display: flex;
+            
+
+            &:hover{
+                animation: disparition-heart 1s;
+                animation-fill-mode: forwards;
+            }
+
+            
+            
+        }   
+    
+        .full{
+            display: flex;
+            width: 85px;
+            position: absolute;
+            
+
+        }
+    
+    
+    
+        
+    
+    
+    }
+
+}
+.fond{
+    background-color: #f2f2f2;
+    padding-bottom: 10px;
+}
