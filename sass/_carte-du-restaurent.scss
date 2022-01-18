@@ -1,0 +1,136 @@
+.content{
+    margin: 0% auto;
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 1450px;
+    
+    a{
+        text-decoration: none;
+        color: black;
+
+    }
+    h3{
+        font-weight: 300;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 15px;
+    
+    }
+    .nom-restaux h2{
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-left: 15px;
+        font-size: 23px;
+    }
+    
+    .card-new {
+        position: relative;
+        border-radius: 25px;
+        background-color: white;
+        box-shadow: 1px 1px 12px #b4b3b3;
+        width: 95%;
+        margin-left: 12px;
+        margin-right: 5px;
+        margin-bottom: 35px; 
+
+        &:hover{
+            transition: .8s;
+            box-shadow: 1px 1px 12px $secondary;
+        }
+
+       
+        img{
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+    }
+    .new {
+        position: absolute;
+        top: 10%;
+        left: 79%;
+        transform: translate(-50%, -50%);
+        background-color: $tertiare;
+        border-radius: 5px;
+    }
+    p{
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #018966;
+        
+
+    }
+    .contener-t-i{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        align-items: center;
+
+    }
+    .contener-t{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nom-restaux{
+        display: flex;
+        
+        
+    }
+    
+    .heart-i{
+        display: flex;
+        margin-right: -6%;
+        
+
+        .heart-card-full{   
+            position: absolute;
+            z-index: 2;
+            overflow: visible;
+            width: 100px;
+        }
+        .heart-card-empty{
+            display: flex;
+            overflow: visible;
+            z-index: 3;
+            width: 100px;
+            &:hover{
+                animation: disparition-heart 1s;
+                animation-fill-mode: forwards;
+            }
+            
+
+        }
+        
+    }
+    .card{
+        position: relative;
+        border-radius: 25px;
+        background-color: white;
+        box-shadow: 1px 1px 12px #b4b3b3;
+        width: 95%;
+        margin-left: 12px;
+        margin-right: 5px;
+        margin-bottom: 35px; 
+        &:hover{
+            transition: .8s;
+            box-shadow: 1px 1px 12px $secondary;
+        }
+
+        
+        img{
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        h2{
+            margin-left: 15px;
+            margin-bottom: 0px;
+        }
+        
+    }
+}

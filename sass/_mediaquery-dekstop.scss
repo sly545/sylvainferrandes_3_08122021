@@ -1,28 +1,53 @@
-/* rajouter cette media queri dan sun fichier a par (desktop) */
-
 @media screen and (min-width: 993px){
 
-
+    
     .logo-carte{
         margin-right: 16%;
         justify-content: center;
 
         img{
-            width: 39%; 
+            width: 39%;
+            margin-right: 203px; 
+        }
+
+        a{
+            margin-right: 33%;
+        }
+        i{
+            font-size: 39px;
+
+            &:hover{
+                transition: .5s;
+                color: $secondary;
+            }
         }
     }
     body{
         width: 90%;
-        margin: 0 auto ;
+        margin: 0 auto;
 
         @media screen and (max-width:1200px) {
             width:100%;
+
+            .spinload-back{
+                width: 100%;
+
+            }
         }
-        
-        
+    }
+
+    .spinload-back{
+        width: 90%;
+    }
+    .spinload{
+        left: 48%;
+    }
+
+    .menu-title img{
+        border-radius: 25px 25px 0 0;
     }
     
-    .rom{
+    .big-logo{
         margin-top: 5px;
 
         img{
@@ -31,6 +56,16 @@
     }
     .title{
         font-size: 17px;
+    }
+
+    .contnere-text-minicard{
+
+        h2{
+            font-size: 16px;
+        }
+        h3{
+            font-size: 14px;
+        }
     }
 
 
@@ -62,6 +97,7 @@
         margin-bottom: 20px;
         text-align: center;
     }
+
 
     .title-restau {
         
@@ -137,6 +173,10 @@
         h1{
             font-size: 35px;
         }
+
+        .menu-heart{
+            margin-right: 5%;
+        }
     }
     .Entrée{
         padding-top: 0%;
@@ -150,7 +190,7 @@
         align-items: flex-start;
     }
     .mini-card{
-        width: 100%;
+        width: 320px;
         margin-left: 0%;
     }
     .desert{
@@ -163,9 +203,6 @@
         font-size: 25px;
         margin-left: 9%;
     }
-
-
-
 }
 
 

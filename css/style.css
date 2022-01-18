@@ -111,102 +111,16 @@
     overflow: visible;
   }
 }
-/* rajouter cette media queri (tablette) dan sun fichier a par */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .choice {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    height: 95px;
-  }
-
-  .fond {
-    padding-bottom: 10px;
-  }
-
-  .phone {
-    margin-right: 5px;
-  }
-  .phone i {
-    margin-left: 0px;
-  }
-
-  .side-bar {
-    margin-right: 5px;
-  }
-  .side-bar i {
-    margin-left: 0px;
-  }
-
-  .T1 {
-    margin-left: 38%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .title-restau h2 {
-    margin-left: 38%;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-  .content h2 {
-    font-size: 20px;
-  }
-
-  .new-tabs {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .card-nonew-tabs {
-    display: flex;
-    flex-direction: row;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-  }
-  footer img {
-    width: 200px;
-    position: absolute;
-  }
-  footer ul {
-    display: flex;
-    flex-direction: row;
-  }
-  footer ul p {
-    margin-top: 55px;
-    margin-right: 25px;
-  }
-
-  .texte-menu {
-    top: 300px;
-  }
-  .texte-menu h1 {
-    font-size: 35px;
-  }
-
-  .command {
-    font-size: 25px;
-    margin-left: 9%;
-  }
-
-  .end-comend {
-    background-color: #f2f2f2;
-  }
-}
 * {
   font-family: "Roboto", sans-serif;
 }
 
 img {
   object-fit: cover;
+}
+
+body {
+  margin: 0;
 }
 
 .spinload-back {
@@ -238,11 +152,13 @@ img {
   z-index: 7;
 }
 
-body {
-  margin: 0;
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.rom {
+.big-logo {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -251,15 +167,9 @@ body {
   flex-direction: row;
   margin-top: 18px;
 }
-.rom img {
+.big-logo img {
   width: 55%;
   margin-bottom: 10px;
-}
-
-.head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 form {
@@ -291,7 +201,7 @@ form i {
   text-align: center;
 }
 
-.test {
+.discover {
   text-align: center;
   font-weight: 200;
 }
@@ -339,6 +249,7 @@ form i {
   align-items: center;
   flex-direction: row;
   background-color: #f2f2f2;
+  height: 55px;
   border-radius: 15px;
   text-decoration: none;
   justify-content: space-between;
@@ -353,7 +264,7 @@ form i {
   box-shadow: 1px 1px 12px #FF79DA;
   transition: 1s;
 }
-.choice .number-one p {
+.choice .number-one h6 {
   background-color: #9356DC;
   border-radius: 25px;
   padding-right: 5px;
@@ -377,6 +288,7 @@ form i {
   align-items: center;
   flex-direction: row;
   background-color: #f2f2f2;
+  height: 55px;
   border-radius: 15px;
   text-decoration: none;
   justify-content: space-between;
@@ -391,7 +303,7 @@ form i {
   box-shadow: 1px 1px 12px #FF79DA;
   transition: 1s;
 }
-.choice .number-two p {
+.choice .number-two h6 {
   background-color: #9356DC;
   border-radius: 25px;
   padding-right: 5px;
@@ -412,6 +324,7 @@ form i {
 }
 .choice .store a {
   display: flex;
+  height: 55px;
   align-items: center;
   flex-direction: row;
   background-color: #f2f2f2;
@@ -429,7 +342,7 @@ form i {
   box-shadow: 1px 1px 12px #FF79DA;
   transition: 1s;
 }
-.choice .number-three p {
+.choice .number-three h6 {
   background-color: #9356DC;
   border-radius: 25px;
   padding-right: 5px;
@@ -534,6 +447,7 @@ form i {
 }
 .content .heart-i {
   display: flex;
+  margin-right: -6%;
 }
 .content .heart-i .heart-card-full {
   position: absolute;
@@ -627,14 +541,15 @@ form i {
   display: flex;
   flex-direction: row;
   background-color: #f2f2f2;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 25px 25px 0 0;
   position: absolute;
-  top: 287px;
+  top: 290px;
   align-items: center;
 }
 .texte-menu h1 {
-  font-size: 26px;
+  padding-left: 20px;
+  font-size: 23px;
   font-family: "Shrikhand";
   margin-right: 13px;
 }
@@ -646,10 +561,16 @@ form i {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 30%;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 320px) {
+  .texte-menu .menu-heart {
+    position: absolute;
+    right: 0%;
+  }
 }
 .texte-menu .menu-heart .empty {
-  width: 100px;
+  width: 85px;
   position: absolute;
   display: flex;
 }
@@ -659,24 +580,29 @@ form i {
 }
 .texte-menu .menu-heart .full {
   display: flex;
-  width: 100px;
+  width: 85px;
   position: absolute;
 }
 
 .Entrée {
+  opacity: 0;
+  transform: translateY(-100px);
   padding-top: 35px;
-  animation: mini-comes 2s;
-  transition: 0.3s;
+  animation: mini-comes 2s forwards;
 }
 
 .plats {
-  animation: mini-comes 4s;
-  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: mini-comes 2s forwards;
+  animation-delay: 1s;
 }
 
 .desert {
-  animation: mini-comes 5s;
-  transition: 0.6s;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: mini-comes 2s forwards;
+  animation-delay: 2s;
 }
 
 .intitu {
@@ -699,7 +625,6 @@ form i {
   margin-left: 5%;
   align-items: center;
   justify-content: space-between;
-  animation: mini-comes 1s;
 }
 .mini-card:hover .check {
   animation: back-apparition 1s;
@@ -721,7 +646,7 @@ form i {
   text-overflow: ellipsis;
 }
 .contnere-text-minicard h2 {
-  font-size: 16px;
+  font-size: 14px;
   padding-left: 17px;
   margin-bottom: auto;
   overflow: hidden;
@@ -730,7 +655,7 @@ form i {
 }
 .contnere-text-minicard h3 {
   font-weight: 300;
-  font-size: smaller;
+  font-size: 12px;
   padding-left: 17px;
   overflow: hidden;
   white-space: nowrap;
@@ -741,7 +666,7 @@ form i {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  width: 10px;
+  width: 43px;
 }
 
 .check {
@@ -865,6 +790,10 @@ footer ul p {
     flex-direction: column;
     height: auto;
   }
+  .content .heart-i {
+    width: 22%;
+    margin-right: 0%;
+  }
   .content h2 {
     font-size: 20px;
   }
@@ -877,6 +806,29 @@ footer ul p {
   .card-nonew-tabs {
     display: flex;
     flex-direction: row;
+  }
+
+  .texte-menu {
+    top: 300px;
+  }
+  .texte-menu h1 {
+    font-size: 35px;
+  }
+
+  .contnere-text-minicard h2 {
+    font-size: 16px;
+  }
+  .contnere-text-minicard h3 {
+    font-size: 14px;
+  }
+
+  .command {
+    font-size: 25px;
+    margin-left: 9%;
+  }
+
+  .end-comend {
+    background-color: #f2f2f2;
   }
 
   footer {
@@ -896,24 +848,7 @@ footer ul p {
     margin-top: 55px;
     margin-right: 25px;
   }
-
-  .texte-menu {
-    top: 300px;
-  }
-  .texte-menu h1 {
-    font-size: 35px;
-  }
-
-  .command {
-    font-size: 25px;
-    margin-left: 9%;
-  }
-
-  .end-comend {
-    background-color: #f2f2f2;
-  }
 }
-/* rajouter cette media queri dan sun fichier a par (desktop) */
 @media screen and (min-width: 993px) {
   .logo-carte {
     margin-right: 16%;
@@ -963,16 +898,24 @@ footer ul p {
   }
 }
 @media screen and (min-width: 993px) {
-  .rom {
+  .big-logo {
     margin-top: 5px;
   }
-  .rom img {
+  .big-logo img {
     width: 35%;
   }
 }
 @media screen and (min-width: 993px) {
   .title {
     font-size: 17px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .contnere-text-minicard h2 {
+    font-size: 16px;
+  }
+  .contnere-text-minicard h3 {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 993px) {

@@ -1,0 +1,28 @@
+.spinload-back{
+    visibility: hidden;
+    width: 100%;
+    height:100%;
+    background-color: $secondary;
+    background-image: linear-gradient(to bottom right, $secondary, $primary);
+    position: fixed;
+    z-index: 6;
+    animation: fade-spin 5s linear;
+}
+.spinload{
+    visibility: hidden;
+    margin: auto;
+    border: 10px solid $tertiare;
+    width: 75px;
+    height: 75px;
+    border-top-color: $primary;
+    border-bottom-color: $secondary;
+    border-radius: 50%;
+    animation: spinload 5s linear;
+    position: fixed;
+    left: 40%;
+    right: 50%;
+    top:50%;
+    bottom: 50%;
+    z-index: 7;
+
+}

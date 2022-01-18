@@ -1,439 +1,14 @@
 @import "./variables";
 @import "./keyframes";
-@import "./mediaquery-tablette";
+@import "./global";
+@import "./loading";
+@import "./header";
+@import "./bar-de-naviguation";
+@import "./carte-du-restaurent";
 
-
-*{
-    font-family: 'Roboto', sans-serif;
-}
-
-img{
-    object-fit: cover;
-   
-}
-
-.spinload-back{
-    visibility: hidden;
-    width: 100%;
-    height:100%;
-    background-color: $secondary;
-    background-image: linear-gradient(to bottom right, $secondary, $primary);
-    position: fixed;
-    z-index: 6;
-    animation: fade-spin 5s linear;
-
-
-}
-.spinload{
-    visibility: hidden;
-    margin: auto;
-    border: 10px solid $tertiare;
-    width: 75px;
-    height: 75px;
-    border-top-color: $primary;
-    border-bottom-color: $secondary;
-    border-radius: 50%;
-    animation: spinload 5s linear;
-    position: fixed;
-    left: 40%;
-    right: 50%;
-    top:50%;
-    bottom: 50%;
-    z-index: 7;
-
-}
-body{
-        margin: 0;
-    }
-
-    .rom{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        box-shadow: 0px 2px 3px 0px #b4b3b3;
-        align-items: center;
-        flex-direction: row;
-        margin-top: 18px;
-        
-
-        img{
-            width: 55%;
-            margin-bottom: 10px;
-        }
-    }
-    .head {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-}
-    
-   
-    form{
-        
-        font-size: 20px;
-        color: rgb(56, 51, 51);
-        background-color: #f2f2f2;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        justify-content: center;
-
-        input{
-            width: 200px;
-            border: none;
-            font-weight: 400;
-            background-color: #f2f2f2;
-            font-size: 23px;
-            margin-left: 10px;
-        }
-        i{
-            font-size: 20px;
-            margin-left: 70px;
-        }
-    }
-    .title{
-        text-align: center;
-    }
-    .test{
-        text-align: center;
-        font-weight: 200;
-}
-    .navi{
-        background-color:#f2f2f2;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-
-        
-        
-
-        a{
-            text-decoration: none;
-            border-radius: 45px;
-            margin-top: 15px;
-            margin-bottom: 45px;
-            color: white;
-            font-size: 20px;
-            padding: 18px;
-            font-weight: 300;
-            background-color: $secondary;
-            background-image: linear-gradient(to bottom right, $secondary, $primary);
-            &:hover{
-                transition: 1s;
-                opacity: 0.8;
-                box-shadow: 1px 1px 12px $secondary;
-            }
-
-        }
-    }
-    .T1{
-        margin-top: 45px;
-        margin-bottom: 30px;
-        margin-left: 10%;
-        
-    }
-    
-    .choice{
-        margin: 0 auto;
-        width: 95%;
-
-        p{
-            font-size: medium;
-            margin-right: 25px;
-            
-        }
-
-        
-        
-        .phone a{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            background-color: #f2f2f2;
-            border-radius: 15px;
-            text-decoration: none;
-            justify-content: space-between;
-            color: black;
-            margin-left: 5px;
-            margin-right: 5px; 
-            margin-bottom: 20px;
-            box-shadow: 1px 1px 12px #b4b3b3;
-
-            &:hover{
-                background-color: #f5eeff;
-                box-shadow: 1px 1px 12px $secondary;
-                transition: 1s; 
-            }
-
-            
-        }
-
-        .number-one p{
-            background-color: $primary;
-            border-radius:25px;
-            padding-right: 5px;
-            padding-left: 5px;
-            margin-left: -10px;
-            color: white;
-            font-size: 17px;
-        
-    
-        }
-        .phone-text{
-            width: 100%;
-            font-size: 20px;
-            
-            
-        }
-        .phone-i{
-            color: grey;
-            margin-left: 15px;
-            margin-right: 24px;
-            font-size: 24px;
-            
-        }
-        .side-bar a{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            background-color: #f2f2f2;
-            border-radius: 15px;
-            text-decoration: none;
-            justify-content: space-between;
-            color: black;
-            margin-left: 5px;
-            margin-right: 5px;
-            margin-bottom: 20px;
-            box-shadow: 1px 1px 12px #b4b3b3; 
-            &:hover{
-                background-color: #f5eeff;
-                box-shadow: 1px 1px 12px $secondary;
-                transition: 1s; 
-            }
-        }
-
-        .number-two p{
-            background-color: $primary;
-            border-radius:25px;
-            padding-right: 5px;
-            padding-left: 5px;
-            margin-left: -10px;
-            color: white;
-            font-size: 17px;
-        
-    
-        }
-        .side-bar-text{
-            width: 100%;
-            font-size: 20px;
-            
-            
-        }
-        .side-bar-i{
-            color: grey;
-            margin-left: 15px;
-            margin-right: 24px;
-            font-size: 24px;
-            
-        }
-        .store a{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            background-color: #f2f2f2;
-            border-radius: 15px;
-            text-decoration: none;
-            justify-content: space-between;
-            color: black;
-            margin-left: 5px;
-            margin-right: 5px; 
-            margin-bottom: 100px;
-            box-shadow: 1px 1px 12px #b4b3b3;
-            &:hover{
-                background-color: #f5eeff;
-                box-shadow: 1px 1px 12px $secondary;
-                transition: 1s;
-            }
-        }
-
-        .number-three p{
-            background-color: $primary;
-            border-radius:25px;
-            padding-right: 5px;
-            padding-left: 5px;
-            margin-left: -10px;
-            color: white;
-            font-size: 17px;
-        
-    
-        }
-        .store-text{
-            width: 100%;
-            font-size: 20px;
-            
-        }
-        .store-i{
-            color: grey;
-            margin-left: 15px;
-            margin-right: 21px;
-            font-size: 24px;
-            
-        }
-    }
-    .title-restau{
-            background-color: #f2f2f2;
-        
-        h2{
-            margin-left: 12%;
-            font-size: 27px;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        
-    
-    }
 
     
-    .content{
-        margin: 0% auto;
-        width: 100%;
-        background-color: #f2f2f2;
-        height: 1450px;
-        
-        a{
-            text-decoration: none;
-            color: black;
 
-        }
-        h3{
-            font-weight: 300;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            margin-left: 15px;
-        
-        }
-        .nom-restaux h2{
-            margin-top: 8px;
-            margin-bottom: 0px;
-            margin-left: 15px;
-            font-size: 23px;
-        }
-        
-        .card-new {
-            position: relative;
-            border-radius: 25px;
-            background-color: white;
-            box-shadow: 1px 1px 12px #b4b3b3;
-            width: 95%;
-            margin-left: 12px;
-            margin-right: 5px;
-            margin-bottom: 35px; 
-
-            &:hover{
-                transition: .8s;
-                box-shadow: 1px 1px 12px $secondary;
-            }
-
-           
-            img{
-                width: 100%;
-                border-radius: 20px 20px 0px 0px;
-            }
-
-        }
-        .new {
-            position: absolute;
-            top: 10%;
-            left: 79%;
-            transform: translate(-50%, -50%);
-            background-color: $tertiare;
-            border-radius: 5px;
-        }
-        p{
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #018966;
-            
-
-        }
-        .contener-t-i{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 95%;
-            align-items: center;
-
-        }
-        .contener-t{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .nom-restaux{
-            display: flex;
-            
-            
-        }
-        
-        .heart-i{
-            display: flex;
-            
-
-            .heart-card-full{   
-                position: absolute;
-                z-index: 2;
-                overflow: visible;
-                width: 100px;
-            }
-            .heart-card-empty{
-                display: flex;
-                overflow: visible;
-                z-index: 3;
-                width: 100px;
-                &:hover{
-                    animation: disparition-heart 1s;
-                    animation-fill-mode: forwards;
-                }
-                
-
-            }
-            
-        }
-        .card{
-            position: relative;
-            border-radius: 25px;
-            background-color: white;
-            box-shadow: 1px 1px 12px #b4b3b3;
-            width: 95%;
-            margin-left: 12px;
-            margin-right: 5px;
-            margin-bottom: 35px; 
-            &:hover{
-                transition: .8s;
-                box-shadow: 1px 1px 12px $secondary;
-            }
-
-            
-            img{
-                width: 100%;
-                border-radius: 20px 20px 0px 0px;
-            }
-
-            h2{
-                margin-left: 15px;
-                margin-bottom: 0px;
-            }
-            
-        }
-    }
 
 
 .fond{
@@ -496,17 +71,23 @@ body{
     display: flex;
     flex-direction: row;
     background-color: #f2f2f2;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 25px 25px 0 0;
     position: absolute;
-    top: 287px;
+    top: 290px;
     align-items: center;
+    
 
 
     h1{
-        font-size: 26px;
+        padding-left: 20px;
+        font-size: 23px;
         font-family : 'Shrikhand';
         margin-right: 13px;
+
+        
+
+
 
     }
     i{
@@ -517,25 +98,36 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-right: 30%;
+        justify-content: flex-end;
+
+        @media screen and (max-width:320px){
+            position:absolute;
+            right: 0%;
+            
+        }
         
     
         .empty{
-            width: 100px;
+            width: 85px;
             position: absolute;
             display: flex;
+            
 
             &:hover{
                 animation: disparition-heart 1s;
                 animation-fill-mode: forwards;
             }
+
+            
             
         }   
     
         .full{
             display: flex;
-            width: 100px;
+            width: 85px;
             position: absolute;
+            
+
         }
     
     
@@ -549,22 +141,29 @@ body{
 
     
 .Entrée{
-    padding-top: 35px;
-    animation: mini-comes  2s;
-    transition: .3s;
+    opacity: 0;
+    transform: translateY(-100px);
+    padding-top: 35px ;
+    animation: mini-comes  2s forwards;
     
     
 }
 .plats{
-
-    animation: mini-comes  4s;
-    transition: .5s;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: mini-comes  2s forwards;
+    animation-delay: 1s;
+    
     
 
 }
 .desert{
-    animation: mini-comes 5s;
-    transition: .6s;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: mini-comes 2s forwards;
+    animation-delay: 2s;
+
+
 }
 
 
@@ -589,7 +188,7 @@ body{
     margin-left: 5%;
     align-items: center;
     justify-content: space-between;
-    animation: mini-comes 1s;
+    
     
     
     
@@ -623,7 +222,7 @@ body{
     
 
     h2{
-        font-size: 16px;
+        font-size: 14px;
         padding-left: 17px;
         margin-bottom: auto;
         overflow: hidden;
@@ -632,7 +231,7 @@ body{
     }
     h3{
         font-weight: 300;
-        font-size: smaller;
+        font-size: 12px;
         padding-left: 17px;
         overflow: hidden;
         white-space: nowrap;
@@ -647,7 +246,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    width: 10px;
+    width: 43px;
     
     
 }
@@ -746,332 +345,8 @@ ul{
 
 /* rajouter cette media queri (tablette) dan sun fichier a par */
 
-@media screen and (min-width: 768px) and (max-width: 992px){
+@import "./mediaquery-tablette";
 
-
-    .spinload{
-        left: 45%;
-    }
-
-    .choice{
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        height: 95px;
-        
-
-        
-    }
-    .fond{
-        padding-bottom: 10px;
-    }
-
-    .phone{
-        margin-right: 5px;
-
-        i{
-            margin-left: 0px;
-        }
-    }
-    .side-bar{
-        margin-right: 5px;
-
-        i{
-            margin-left: 0px;
-        }
-    }
-    
-    .T1{
-        margin-left: 38%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        
-    }
-
-    .title-restau {
-        
-
-        h2{
-            margin-left: 38%;
-        }
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-
-        h2{
-            font-size: 20px;
-        }
-        
-    }
-
-
-    .new-tabs{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .card-nonew-tabs{
-        display: flex;
-        flex-direction: row;
-    }
-    footer{
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        
-        img{
-            width: 200px;
-            position: absolute;
-
-        }
-
-        
-        ul{
-            display: flex;
-            flex-direction: row;
-
-            p{
-                margin-top: 55px;
-                margin-right: 25px;
-            }
-        }
-    }
-
-    .texte-menu{
-        top: 300px;
-        
-        h1{
-            font-size: 35px;
-        }
-    }
-    
-
-    .command{
-        font-size: 25px;
-        margin-left: 9%;
-    }
-    .end-comend{
-        background-color: #f2f2f2;
-    }
-    
-
-    
-        
-}
-
-/* rajouter cette media queri dan sun fichier a par (desktop) */
-
-@media screen and (min-width: 993px){
-
-    
-    .logo-carte{
-        margin-right: 16%;
-        justify-content: center;
-
-        img{
-            width: 39%;
-            margin-right: 203px; 
-        }
-
-        a{
-            margin-right: 33%;
-        }
-        i{
-            font-size: 39px;
-
-            &:hover{
-                transition: .5s;
-                color: $secondary;
-            }
-        }
-    }
-    body{
-        width: 90%;
-        margin: 0 auto;
-
-        @media screen and (max-width:1200px) {
-            width:100%;
-
-            .spinload-back{
-                width: 100%;
-
-            }
-        }
-    }
-
-    .spinload-back{
-        width: 90%;
-    }
-    .spinload{
-        left: 48%;
-    }
-
-    .menu-title img{
-        border-radius: 25px 25px 0 0;
-    }
-    
-    .rom{
-        margin-top: 5px;
-
-        img{
-            width: 35%;
-        }
-    }
-    .title{
-        font-size: 17px;
-    }
-
-
-    .choice{
-        display: flex;
-        flex-direction: row;
-        height: 95px;
-        justify-content: space-around;
-    }
-
-    .phone{
-        margin-right: 5px;
-
-        i{
-            margin-left: 0px;
-        }
-    }
-    .side-bar{
-        margin-right: 5px;
-
-        i{
-            margin-left: 0px;
-        }
-    }
-    
-    .T1{
-        margin-left: 0;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-
-    .title-restau {
-        
-
-        h2{
-            margin-left:0%;
-            text-align: center;
-        }
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-
-        h2{
-            font-size: 20px;
-        }
-
-        .card-new{
-            width: 40%;
-            margin-left: 6%;
-
-        }
-        .card{
-            width: 40%;
-            margin-left: 6%;
-        }
-        
-    }
-
-
-    .new-tabs{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .card-nonew-tabs{
-        display: flex;
-        flex-direction: row;
-    }
-    footer{
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        
-        img{
-            width: 190px;
-            position: absolute;
-
-        }
-
-        
-        ul{
-            display: flex;
-            flex-direction: row;
-
-            p{
-                margin-top: 55px;
-                margin-right: 25px;
-            }
-        }
-    }
-
-    
-
-    .texte-menu{
-        
-        width: 100%;
-        display: flex;
-        position: unset;
-        border-radius: unset;
-        justify-content: space-around;
-        h1{
-            font-size: 35px;
-        }
-
-        .menu-heart{
-            margin-right: 5%;
-        }
-    }
-    .Entrée{
-        padding-top: 0%;
-    }
-
-    .fond{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-    .mini-card{
-        width: 320px;
-        margin-left: 0%;
-    }
-    .desert{
-        padding-bottom: 3px;
-    }
-    .end-comend{
-        background-color:#f2f2f2;
-    }
-    .command{
-        font-size: 25px;
-        margin-left: 9%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
+@import "./mediaquery-dekstop";
 
 

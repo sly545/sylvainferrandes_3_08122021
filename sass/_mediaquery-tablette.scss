@@ -1,6 +1,9 @@
-/* rajouter cette media queri (tablette) dan sun fichier a par */
-
 @media screen and (min-width: 768px) and (max-width: 992px){
+
+
+    .spinload{
+        left: 45%;
+    }
 
     .choice{
         display: flex;
@@ -49,6 +52,13 @@
         flex-direction: column;
         height: auto;
 
+        .heart-i{
+            width: 22%;
+            margin-right: 0%;
+
+        }
+
+
         h2{
             font-size: 20px;
         }
@@ -65,11 +75,36 @@
         display: flex;
         flex-direction: row;
     }
+    
+
+    .texte-menu{
+        top: 300px;
+        
+        h1{
+            font-size: 35px;
+        }
+    }
+    .contnere-text-minicard{
+
+        h2{
+            font-size: 16px;
+        }
+        h3{
+            font-size: 14px;
+        }
+    }
+
+    .command{
+        font-size: 25px;
+        margin-left: 9%;
+    }
+    .end-comend{
+        background-color: #f2f2f2;
+    }
     footer{
         display: flex;
         flex-direction: row;
         height: auto;
-        
         
         img{
             width: 200px;
@@ -87,23 +122,6 @@
                 margin-right: 25px;
             }
         }
-    }
-
-    .texte-menu{
-        top: 300px;
-        
-        h1{
-            font-size: 35px;
-        }
-    }
-    
-
-    .command{
-        font-size: 25px;
-        margin-left: 9%;
-    }
-    .end-comend{
-        background-color: #f2f2f2;
     }
     
 
